@@ -9,6 +9,6 @@
 
         {{content_for_layout}}
 
-        {{ 'scripts.js' |  asset_url | script_tag }}
+        <script src="{{ 'scripts.js' | asset_url }}" async></script>
     </body>
 </html>
