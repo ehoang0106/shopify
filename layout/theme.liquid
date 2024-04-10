@@ -9,6 +9,10 @@
 
         {{content_for_layout}}
 
+        {%  section 'tooltips' %}
+
         <script src="{{ 'scripts.js' | asset_url }}" async></script>
+        <script src="{{ 'tooltips.js' | asset_url }}" async></script>
+
     </body>
 </html>
