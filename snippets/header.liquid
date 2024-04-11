@@ -11,9 +11,9 @@
       </li>
     {%- endfor %}
 
-    <!-- Footer menu -->
+    {% comment %} <!-- Footer menu -->
     {% for link in linklists.footer.links -%}
       {{ link.title | link_to: link.url }}
-    {%- endfor %}
+    {%- endfor %} {% endcomment %}
   </ul>
 </header>
