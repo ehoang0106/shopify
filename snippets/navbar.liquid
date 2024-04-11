@@ -1,0 +1,33 @@
+<header>
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">{{ shop.name }}</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        {% for link in linklists['main-menu'].links %}
+          {% if forloop.index > 1 %}
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <form class="d-flex" action="{{ routes.search_url }}">
+        <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="q" value="{{ search.terms |  escape }}">
+        <input type="submit" value="Search">
+
+      </form>
+    </div>
+  </nav>
+</header>
