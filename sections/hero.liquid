@@ -1,0 +1,72 @@
+<div id="carouselExampleFade" class="carousel slide carousel-fade">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="carousel-item">
+        <img
+          src="{{ section.settings.image | image_url: width: section.settings.width | image_tag }}"
+          class="d-block w-100"
+          alt="..."
+          width="{{ section.settings.width }}"
+          height="auto">
+      </div>
+      <div class="carousel-item">
+        <img
+          src="{{ section.settings.image | image_url: width: section.settings.width | image_tag }}"
+          class="d-block w-100"
+          alt="..."
+          width="{{ section.settings.width }}"
+          height="auto">
+      </div>
+      <div class="carousel-item">
+        <img
+          src="{{ section.settings.image | image_url: width: section.settings.width | image_tag }}"
+          class="d-block w-100"
+          alt="..."
+          width="{{ section.settings.width }}"
+          height="auto">
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleFade"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleFade"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  {% schema %}
+    {
+      "name": "Hero Section",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Select an image for the carousel item"
+        },
+        {
+          "type": "range",
+          "id": "width",
+          "label": "Image Width",
+          "info": "Set the width of the image",
+          "min": 100,
+          "max": 1000,
+          "step": 100,
+          "default": 300
+        }
+      ]
+    }
+
+  {% endschema %}
+
+</div>

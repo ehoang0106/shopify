@@ -1,7 +1,7 @@
 <header>
-  <div class="container">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">{{ shop.name }}</a>
+  <div class="container mb-5 d-flex justify-content-center align-items-center">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light justify-content-center">
+      <a class="navbar-brand justify-content-center" href="/">{{ shop.name }}</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -13,7 +13,7 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav">
           {% for link in linklists['main-menu'].links %}
             {% if forloop.index > 1 %}
@@ -23,7 +23,7 @@
             {% endif %}
           {% endfor %}
         </ul>
-        <form class="d-flex" action="{{ routes.search_url }}">
+        <form class="d-flex justify-content-center" action="{{ routes.search_url }}">
           <input
             class="form-control me-2"
             type="text"
